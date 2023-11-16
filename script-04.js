@@ -33,10 +33,10 @@
 //
 
 // 1. The ul for the list of pokemon
-
+const pokeList = document.querySelector(".poke-items");
 // 2. The span message to display the index
 
-
+const spanMessage = document.querySelector(".message-bold")
 //
 // FUNCTIONS
 //
@@ -44,14 +44,16 @@
 // 3. Handle the event when a user clicks on the list
 function listClickHander(event) {
   // 4. Check if the click event is from a button or something else
-
+  if (event.target.nodeName !== "BUTTON") {
+    return;
+  }
 
 
   // 5. Get the index from the data attribute (dataset.pokemon)
-
+  const dataIndex = event.target.dataset.pokemon
 
   // 6. Use the textContent of the span to display the index that was clicked
-
+  spanMessage.textContent = dataIndex;
 }
 
 //
@@ -61,3 +63,4 @@ function listClickHander(event) {
 // 7. Add the event listener to the pokeList by listening for
 //   a click event and calling the listClickHander function
 
+pokeList.addEventListener("click", listClickHander);

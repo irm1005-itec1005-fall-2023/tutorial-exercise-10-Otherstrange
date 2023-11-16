@@ -35,7 +35,7 @@
 // 1. The ul for the list of pokemon
 const pokeList = document.querySelector(".poke-items");
 // 2. The span message to display the index
-const pokeMessage = document.querySelector(".message");
+const pokeMessage = document.querySelector(".message-bold");
 
 //
 // FUNCTIONS
